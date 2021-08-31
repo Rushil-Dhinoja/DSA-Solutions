@@ -28,8 +28,8 @@
 // The first Thing I do inside the for loop is I check whether the current value already exists in the Map if true, I return the Two index;
 //If false I add the Compliment of current value with relation to the target as key and current index as value inside Map.
 
-const testCaseArray = [2, 7, 11, 4];
-const target = 6;
+const testCaseArray = [2, 11, 4, 7];
+const target = 9;
 
 const mySolutionTwoSum = (arrayOfNums, target) => {
   //Create a Hash Table (Ex, Object, Set, Map) I used map as it can store both Key and Value of type any;
@@ -46,6 +46,7 @@ const mySolutionTwoSum = (arrayOfNums, target) => {
     }
     //If false add the compliment of the current value with relation to target as Key and Current index as value in the Map
     complimentMap.set(target - arrayOfNums[index], index);
+    console.table(complimentMap);
   }
 
   //Edge Case if No Pairs are found;
@@ -61,14 +62,25 @@ const mySolutionTwoSum = (arrayOfNums, target) => {
 
 //Best Solution found on LeetCode Starts
 
+//Explanation
+//Here the logic is reversed than my approach instead of pushing the compliment to Hash Table. The Value itself is pushed as a key and index as a value to the hash table
+//Instead of looking for the compliment in the Hash Table. Here it is checked in the condition.
+//If Target-currentValue exists in the Hash Table that means it is a matching pair. i.e Target = 9 and currentValue = 7 then lookup should have 2 in it. If this condition matches it returns the current index and value of the key found in hash table.
+//Instead of using for loop. Here for...in loop is used and instead of Map here JS Object is used.
+
 const bestSolutionTwoSum = (arrayOfNums, target) => {
+  //Declare and empty Hash Table to store values
   lookup = {};
   for (index in arrayOfNums) {
+    //Get Current Value [Good for code readability]
     let currentValue = arrayOfNums[index];
+    //Check if the compliment exists in the HashTable i.e for the matching pair here [2, 7]; Target - CurrentValue = 9-7 = 2 and if 2 exists as a key in hash table it will be true
     if (lookup[target - currentValue]) {
+      //Return current index and value of the lookup[target-currentValue] which is the index of that element
       return [index, lookup[target - currentValue]];
     }
-    lookup[currentValue] = index;
+    //If the condition is false then push the currentValue as key and currentIndex as value to the Hash Table
+    console.log(currentValue);
   }
 };
 
