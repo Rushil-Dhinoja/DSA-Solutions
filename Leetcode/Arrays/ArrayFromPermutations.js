@@ -42,7 +42,5 @@ function arrayFromPermutations(inputArray) {
 
 console.log(arrayFromPermutations(testData));
 
-//Runtime: 128ms
 //Time Complexity: O(n)
-//Memory Used: 43.3MB
 //My Solution Ends

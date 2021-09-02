@@ -65,7 +65,5 @@ function mergeTwoSortedArray(arrayOne, arrayTwo) {
 
 console.log(mergeTwoSortedArray(arrayOne, arrayTwo));
 
-//Runtime: N/A
-//Memory: N/A
 //Time Complexity: O(n)
 //My Solution Ends

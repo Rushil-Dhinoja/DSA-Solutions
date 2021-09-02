@@ -41,8 +41,6 @@ function containsDuplicate(numbers) {
 
 console.log(containsDuplicate(testData));
 
-//RunTime: 68ms
-//Memory 45.2MB
 //Time Complexity: O(1)
 //My Solution Ends
 
@@ -75,8 +73,6 @@ function classicContainsDuplicate(numbers) {
   return false;
 }
 
-//RunTime: N/A
-//Memory N/A
 //Time Complexity: O(n)
 
 console.log(classicContainsDuplicate(testData));

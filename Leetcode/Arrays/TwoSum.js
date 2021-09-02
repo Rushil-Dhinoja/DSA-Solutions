@@ -54,8 +54,6 @@ const mySolutionTwoSum = (arrayOfNums, target) => {
   return "No pairs found";
 };
 
-//Runtime : 76ms
-//Memory: 41.2MB
 //Time Complexity O(n)
 // My Solution Ends
 
@@ -82,11 +80,7 @@ const bestSolutionTwoSum = (arrayOfNums, target) => {
     console.log(currentValue);
   }
 };
-
-//RunTime: 48ms
-//Memory: N/A
-//Performance Improvement: 45%
-
+//Time Complexity O(n)
 //Best Solution found on LeetCode Ends
 mySolutionTwoSum(testCaseArray, target);
 bestSolutionTwoSum(testCaseArray, target);

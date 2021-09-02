@@ -28,4 +28,5 @@ function reverseString(string) {
 
 console.log(reverseString("Hi my name is rushil"));
 
+//Time Complexity O(n)
 //Solution Ends
