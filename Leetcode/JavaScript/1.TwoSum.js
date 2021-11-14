@@ -47,7 +47,6 @@ const mySolutionTwoSum = (arrayOfNums, target) => {
     }
     //If false add the compliment of the current value with relation to target as Key and Current index as value in the Map
     complimentMap.set(target - arrayOfNums[index], index);
-    console.table(complimentMap);
   }
 
   //Edge Case if No Pairs are found;
@@ -77,7 +76,6 @@ const bestSolutionTwoSum = (arrayOfNums, target) => {
       return [index, lookup[target - currentValue]];
     }
     //If the condition is false then push the currentValue as key and currentIndex as value to the Hash Table
-    console.log(currentValue);
   }
 };
 //Time Complexity O(n)
